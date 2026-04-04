@@ -106,13 +106,13 @@ export default function Hero() {
             >
               <button
                 onClick={scrollToContact}
-                className="bg-gold text-bg font-body font-semibold text-base px-8 py-3.5 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(232,184,109,0.3)] tracking-[0.02em]"
+                className="bg-gold text-bg font-body font-semibold text-base px-8 py-3.5 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(232,184,109,0.3)] focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.4)] tracking-[0.02em]"
               >
                 Start a Conversation
               </button>
               <button
                 onClick={scrollToProcess}
-                className="bg-transparent text-text border border-border px-8 py-3.5 font-body text-base cursor-pointer transition-colors duration-300 hover:border-copper"
+                className="bg-transparent text-text border border-border px-8 py-3.5 font-body text-base cursor-pointer transition-colors duration-300 hover:border-copper focus:outline-none focus:border-gold focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)]"
               >
                 See How It Works
               </button>

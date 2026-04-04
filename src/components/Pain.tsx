@@ -20,7 +20,7 @@ export default function Pain() {
         <ul className="space-y-6">
           {bullets.map((bullet, i) => (
             <li key={i} className="flex items-start gap-4">
-              <span className="mt-2 w-2.5 h-2.5 rounded-full bg-rust shrink-0" />
+              <span className="mt-2 w-2.5 h-2.5 bg-rust shrink-0" />
               <p className="text-text-muted text-base leading-[1.6]">
                 {bullet}
               </p>

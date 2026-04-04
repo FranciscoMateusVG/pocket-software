@@ -10,6 +10,12 @@ import Contact from "@/components/Contact";
 export default function Home() {
   return (
     <>
+      <a
+        href="#contact"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-gold focus:text-bg focus:px-4 focus:py-2 focus:font-body focus:font-semibold"
+      >
+        Skip to content
+      </a>
       <StickyHeader />
       <main>
         <Hero />

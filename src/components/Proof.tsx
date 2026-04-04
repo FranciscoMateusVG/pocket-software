@@ -19,7 +19,7 @@ const caseStudies = [
     industry: "Retail",
     description:
       "An independent retailer had outgrown every off-the-shelf inventory system they tried. We built a stock management platform that mirrors exactly how they buy, store, and sell.",
-    result: "Spreadsheet reconciliation: eliminated",
+    result: "Spreadsheet reconciliation — eliminated",
   },
 ];
 
