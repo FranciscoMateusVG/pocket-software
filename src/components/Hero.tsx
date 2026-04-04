@@ -1,0 +1,125 @@
+"use client";
+
+import { motion, useReducedMotion } from "framer-motion";
+
+export default function Hero() {
+  const prefersReducedMotion = useReducedMotion();
+
+  const words = [
+    "Software",
+    "built",
+    "exclusively",
+    "for",
+    "you.",
+  ];
+
+  const line2Words = [
+    "Not",
+    "a",
+    "platform.",
+    "Not",
+    "a",
+    "template.",
+    "Yours.",
+  ];
+
+  const scrollToContact = () => {
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToProcess = () => {
+    document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section className="pt-40 pb-32 md:pt-64 md:pb-48">
+      <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
+        <div className="grid grid-cols-1 md:grid-cols-[7fr_5fr]">
+          <div>
+            <motion.h1
+              initial={prefersReducedMotion ? false : "hidden"}
+              animate="visible"
+              variants={{
+                visible: { transition: { staggerChildren: 0.08 } },
+              }}
+              className="font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.1] tracking-[-0.01em] mb-6"
+            >
+              <span className="block">
+                {words.map((word, i) => (
+                  <motion.span
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          duration: 0.5,
+                          ease: [0.25, 0.1, 0.25, 1],
+                        },
+                      },
+                    }}
+                    className="inline-block mr-[0.3em]"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="block text-text-muted">
+                {line2Words.map((word, i) => (
+                  <motion.span
+                    key={i}
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: {
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                          duration: 0.5,
+                          ease: [0.25, 0.1, 0.25, 1],
+                        },
+                      },
+                    }}
+                    className="inline-block mr-[0.3em]"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.0, ease: [0.25, 0.1, 0.25, 1] }}
+              className="text-text-muted text-[clamp(1.05rem,1.2vw,1.2rem)] leading-[1.7] max-w-xl mb-10"
+            >
+              We build custom software that only your company has. Every line of
+              code, written for your problem alone.
+            </motion.p>
+
+            <motion.div
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
+              className="flex flex-wrap gap-4"
+            >
+              <button
+                onClick={scrollToContact}
+                className="bg-gold text-bg font-body font-semibold text-base px-8 py-3.5 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(232,184,109,0.3)] tracking-[0.02em]"
+              >
+                Start a Conversation
+              </button>
+              <button
+                onClick={scrollToProcess}
+                className="bg-transparent text-text border border-border px-8 py-3.5 font-body text-base cursor-pointer transition-colors duration-300 hover:border-copper"
+              >
+                See How It Works
+              </button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
