@@ -1,5 +1,8 @@
 services:
   pocket-software-b5e58e:
-    build: .
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_GA_ID: ${NEXT_PUBLIC_GA_ID}
     container_name: pocket-software-b5e58e
     restart: unless-stopped
