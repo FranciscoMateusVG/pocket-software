@@ -1,9 +1,15 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 
 export default function Hero() {
   const prefersReducedMotion = useReducedMotion();
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
 
   const words = [
     "Software",
@@ -45,7 +51,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-[7fr_5fr]">
           <div>
             <motion.h1
-              initial={prefersReducedMotion ? false : "hidden"}
+              initial={!hasMounted || prefersReducedMotion ? false : "hidden"}
               animate="visible"
               variants={{
                 visible: { transition: { staggerChildren: 0.08 } },
@@ -97,7 +103,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.p
-              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              initial={!hasMounted || prefersReducedMotion ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0, ease: [0.25, 0.1, 0.25, 1] }}
               className="text-text-muted text-[clamp(1.05rem,1.2vw,1.2rem)] leading-[1.7] max-w-xl mb-10"
@@ -106,7 +112,7 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+              initial={!hasMounted || prefersReducedMotion ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
               className="flex flex-wrap gap-4"
