@@ -4,40 +4,40 @@ import AnimatedSection from "./AnimatedSection";
 
 const caseStudies = [
   {
-    industry: "Logistics",
+    industry: "Logística",
     description:
-      "A regional freight company needed a dispatch system that actually matched how they worked. We built a real-time operations dashboard with driver tracking, automated route assignment, and client-facing shipment visibility.",
-    result: "40% reduction in dispatch time within the first quarter",
+      "Uma transportadora regional precisava de um sistema de despacho que funcionasse do jeito delas. Construímos um painel de operações em tempo real com rastreamento de motoristas, atribuição automática de rotas e visibilidade de embarques para os clientes.",
+    result: "40% de redução no tempo de despacho no primeiro trimestre",
   },
   {
-    industry: "Professional Services",
+    industry: "Serviços Profissionais",
     description:
-      "A boutique law firm needed a client portal built around their intake process — not a generic legal SaaS. We built a custom document management and communication tool, shaped to their workflow.",
-    result: "60% less time spent on administrative back-and-forth",
+      "Um escritório de advocacia boutique precisava de um portal de clientes construído em torno do seu processo de captação — não um SaaS jurídico genérico. Construímos uma ferramenta de gestão de documentos e comunicação sob medida.",
+    result: "60% menos tempo gasto com burocracia administrativa",
   },
   {
-    industry: "Retail",
+    industry: "Varejo",
     description:
-      "An independent retailer had outgrown every off-the-shelf inventory system they tried. We built a stock management platform that mirrors exactly how they buy, store, and sell.",
-    result: "Spreadsheet reconciliation — eliminated",
+      "Um varejista independente já tinha superado todos os sistemas de estoque prontos do mercado. Construímos uma plataforma de gestão de estoque que espelha exatamente como eles compram, armazenam e vendem.",
+    result: "Conciliação por planilha — eliminada",
   },
 ];
 
 const faqs = [
   {
-    question: "What does 'exclusive' actually mean?",
+    question: "O que 'exclusivo' realmente significa?",
     answer:
-      "Your software belongs to you alone. We don't resell it, white-label it, or build the same solution for a competitor. Every line of code is purpose-built for your company.",
+      "Seu software pertence só a você. Não revendemos, não fazemos white-label, não construímos a mesma solução para um concorrente. Cada linha de código é feita sob medida para a sua empresa.",
   },
   {
-    question: "How long does a build take?",
+    question: "Quanto tempo leva um projeto?",
     answer:
-      "Most projects ship in 8–16 weeks, depending on scope. We nail down the exact timeline during Discovery — no vague estimates, no moving targets.",
+      "A maioria dos projetos é entregue em 8 a 16 semanas, dependendo do escopo. Definimos o prazo exato durante o Diagnóstico — sem estimativas vagas, sem prazos que mudam.",
   },
   {
-    question: "Do I own the code?",
+    question: "Eu sou dono do código?",
     answer:
-      "Completely. The full codebase is yours from day one. Host it anywhere, extend it with any team, take it wherever your business goes.",
+      "Completamente. O código-fonte completo é seu desde o primeiro dia. Hospede onde quiser, amplie com qualquer equipe, leve para onde o seu negócio for.",
   },
 ];
 
@@ -46,8 +46,8 @@ export default function Proof() {
     <AnimatedSection className="py-32 md:py-48">
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
         <h2 className="font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] mb-16">
-          Built for real businesses.{" "}
-          <span className="text-text-muted">Owned by them, too.</span>
+          Feito para empresas reais.{" "}
+          <span className="text-text-muted">E de propriedade delas.</span>
         </h2>
 
         {/* Case Study Cards */}

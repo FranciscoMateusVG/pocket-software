@@ -40,7 +40,7 @@ export default function StickyHeader() {
               onClick={scrollToContact}
               className="bg-gold text-bg font-body font-semibold text-base px-8 py-2.5 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(232,184,109,0.3)] focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.4)]"
             >
-              Start a Conversation
+              Vamos Conversar
             </button>
           </div>
         </motion.nav>

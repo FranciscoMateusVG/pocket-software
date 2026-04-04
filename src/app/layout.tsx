@@ -17,13 +17,13 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Pocket Software — Software Built Exclusively For You",
+  title: "Pocket Software — Software Feito Exclusivamente Para Você",
   description:
-    "We build custom software that only your company has. Every line of code, written for your problem alone. Tailor-made solutions for businesses that refuse to settle.",
+    "Desenvolvemos software sob medida que só a sua empresa tem. Cada linha de código, escrita para resolver o seu problema. Soluções exclusivas para empresas que não aceitam o padrão.",
   openGraph: {
-    title: "Pocket Software — Software Built Exclusively For You",
+    title: "Pocket Software — Software Feito Exclusivamente Para Você",
     description:
-      "We build custom software that only your company has. Every line of code, written for your problem alone.",
+      "Desenvolvemos software sob medida que só a sua empresa tem. Cada linha de código, escrita para resolver o seu problema.",
     type: "website",
   },
 };
@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="pt-BR"
       className={`${dmSerif.variable} ${outfit.variable} antialiased`}
     >
       <body className="min-h-screen bg-bg text-text font-body">{children}</body>

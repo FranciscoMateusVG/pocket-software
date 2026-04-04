@@ -5,27 +5,27 @@ import { motion, useReducedMotion } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "Discovery",
+    title: "Diagnóstico",
     description:
-      "We spend time understanding your business, your workflows, and the problem you're actually trying to solve.",
+      "Investimos tempo entendendo o seu negócio, seus fluxos de trabalho e o problema que você realmente quer resolver.",
   },
   {
     number: "02",
-    title: "Spec",
+    title: "Especificação",
     description:
-      "We turn that understanding into a precise scope: what we're building, how it works, and exactly what you'll get.",
+      "Transformamos esse entendimento em um escopo preciso: o que vamos construir, como vai funcionar e exatamente o que você vai receber.",
   },
   {
     number: "03",
-    title: "Build",
+    title: "Desenvolvimento",
     description:
-      "Our engineers get to work. You have visibility throughout — no black boxes, no surprises.",
+      "Nossa equipe de engenharia começa a trabalhar. Você tem visibilidade total — sem caixas-pretas, sem surpresas.",
   },
   {
     number: "04",
-    title: "Yours",
+    title: "Entrega",
     description:
-      "We hand over a working, documented codebase that's fully yours to own, operate, and build on.",
+      "Entregamos um código-fonte completo, documentado e totalmente seu para operar, manter e evoluir.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function Process() {
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
           className="font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] mb-16"
         >
-          A clear process, start to finish.
+          Um processo claro, do início ao fim.
         </motion.h2>
 
         <motion.div

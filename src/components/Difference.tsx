@@ -4,19 +4,19 @@ import AnimatedSection from "./AnimatedSection";
 
 const pillars = [
   {
-    title: "Exclusive",
+    title: "Exclusivo",
     description:
-      "Your codebase is built from scratch, for your business alone. We don't reuse it, resell it, or build the same thing for anyone else.",
+      "Seu código-fonte é criado do zero, só para o seu negócio. Não reutilizamos, não revendemos, não construímos a mesma coisa para ninguém.",
   },
   {
-    title: "Tailored",
+    title: "Sob Medida",
     description:
-      "Every feature, every workflow, every decision is shaped around how your team actually works — not how a SaaS vendor thinks you should.",
+      "Cada funcionalidade, cada fluxo de trabalho, cada decisão é moldada pela forma como a sua equipe realmente trabalha — não pela forma como um fornecedor de SaaS acha que deveria.",
   },
   {
-    title: "Owned",
+    title: "Seu",
     description:
-      "You own the code outright, from day one. Host it anywhere. Extend it with any team. It's your competitive edge, not our product.",
+      "Você é dono do código desde o primeiro dia. Hospede onde quiser. Amplie com qualquer equipe. É a sua vantagem competitiva, não o nosso produto.",
   },
 ];
 
@@ -25,8 +25,8 @@ export default function Difference() {
     <AnimatedSection className="py-32 md:py-48">
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
         <h2 className="font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] mb-16">
-          We build software that belongs to you.{" "}
-          <span className="text-copper">Only you.</span>
+          Construímos software que pertence a você.{" "}
+          <span className="text-copper">Só a você.</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">

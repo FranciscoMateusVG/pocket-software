@@ -20,11 +20,10 @@ export default function Contact() {
     <AnimatedSection id="contact" className="pt-32 pb-40 md:pt-48 md:pb-64">
       <div className="max-w-[560px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
         <h2 className="font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] mb-4 text-center">
-          Let&apos;s talk about what you need.
+          Conte-nos o que você precisa.
         </h2>
         <p className="text-text-muted text-[clamp(1.05rem,1.2vw,1.2rem)] leading-[1.7] text-center mb-12">
-          No pitch. No commitment. Just a conversation about what you&apos;re
-          building and whether we&apos;re the right team to build it.
+          Sem pitch. Sem compromisso. Apenas uma conversa sobre o que você está construindo e se somos a equipe certa para isso.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -33,13 +32,13 @@ export default function Contact() {
               htmlFor="name"
               className="block text-text-muted text-sm mb-2"
             >
-              Your name
+              Seu nome
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Jane Smith"
+              placeholder="Maria Silva"
               required
               value={formData.name}
               onChange={(e) =>
@@ -54,13 +53,13 @@ export default function Contact() {
               htmlFor="email"
               className="block text-text-muted text-sm mb-2"
             >
-              Your email
+              Seu e-mail
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="jane@yourcompany.com"
+              placeholder="maria@suaempresa.com.br"
               required
               value={formData.email}
               onChange={(e) =>
@@ -75,13 +74,13 @@ export default function Contact() {
               htmlFor="message"
               className="block text-text-muted text-sm mb-2"
             >
-              What are you trying to build?
+              O que você precisa construir?
             </label>
             <textarea
               id="message"
               name="message"
               rows={5}
-              placeholder="Tell us about your business and the problem you're trying to solve."
+              placeholder="Conte-nos sobre o seu negócio e o problema que você quer resolver."
               required
               value={formData.message}
               onChange={(e) =>
@@ -95,11 +94,11 @@ export default function Contact() {
             type="submit"
             className="w-full bg-gold text-bg font-body font-semibold text-base px-8 py-3.5 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(232,184,109,0.3)] focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.4)] tracking-[0.02em]"
           >
-            Start the Conversation
+            Enviar Mensagem
           </button>
 
           <p className="text-text-dim text-sm text-center">
-            We reply within one business day.
+            Respondemos em até um dia útil.
           </p>
         </form>
       </div>

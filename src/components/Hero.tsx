@@ -7,20 +7,21 @@ export default function Hero() {
 
   const words = [
     "Software",
-    "built",
-    "exclusively",
-    "for",
-    "you.",
+    "feito",
+    "exclusivamente",
+    "para",
+    "você.",
   ];
 
   const line2Words = [
-    "Not",
-    "a",
-    "platform.",
-    "Not",
-    "a",
+    "Não",
+    "é",
+    "plataforma.",
+    "Não",
+    "é",
     "template.",
-    "Yours.",
+    "É",
+    "seu.",
   ];
 
   const scrollToContact = () => {
@@ -94,8 +95,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 1.0, ease: [0.25, 0.1, 0.25, 1] }}
               className="text-text-muted text-[clamp(1.05rem,1.2vw,1.2rem)] leading-[1.7] max-w-xl mb-10"
             >
-              We build custom software that only your company has. Every line of
-              code, written for your problem alone.
+              Desenvolvemos software sob medida que só a sua empresa tem. Cada linha de código, escrita para resolver o seu problema.
             </motion.p>
 
             <motion.div
@@ -108,13 +108,13 @@ export default function Hero() {
                 onClick={scrollToContact}
                 className="bg-gold text-bg font-body font-semibold text-base px-8 py-3.5 cursor-pointer transition-shadow duration-300 hover:shadow-[0_0_24px_rgba(232,184,109,0.3)] focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.4)] tracking-[0.02em]"
               >
-                Start a Conversation
+                Vamos Conversar
               </button>
               <button
                 onClick={scrollToProcess}
                 className="bg-transparent text-text border border-border px-8 py-3.5 font-body text-base cursor-pointer transition-colors duration-300 hover:border-copper focus:outline-none focus:border-gold focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)]"
               >
-                See How It Works
+                Veja Como Funciona
               </button>
             </motion.div>
           </div>
