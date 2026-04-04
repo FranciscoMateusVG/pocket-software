@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { User, Mail, MessageSquare } from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
@@ -15,6 +16,12 @@ export default function Contact() {
     e.preventDefault();
     // TODO: Wire up form submission (API route, email service, etc.)
     console.log("Form submitted:", formData);
+
+    // TODO: Move this after actual submission success once form wiring is implemented
+    sendGAEvent("event", "form_submit", {
+      event_category: "conversion",
+      event_label: "contact_form",
+    });
   };
 
   return (
