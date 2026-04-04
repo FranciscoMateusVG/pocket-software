@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { User, Mail, MessageSquare } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
@@ -34,18 +35,26 @@ export default function Contact() {
             >
               Seu nome
             </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Maria Silva"
-              required
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              className="w-full bg-surface border border-border text-text px-4 py-3.5 font-body text-base placeholder:text-text-dim focus:border-gold focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)] transition-all duration-200"
-            />
+            <div className="relative">
+              <User
+                size={18}
+                strokeWidth={1.5}
+                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim pointer-events-none"
+                aria-hidden="true"
+              />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Maria Silva"
+                required
+                value={formData.name}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+                className="w-full bg-surface border border-border text-text pl-10 pr-4 py-3.5 font-body text-base placeholder:text-text-dim focus:border-gold focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)] transition-all duration-200"
+              />
+            </div>
           </div>
 
           <div>
@@ -55,18 +64,26 @@ export default function Contact() {
             >
               Seu e-mail
             </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="maria@suaempresa.com.br"
-              required
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-              className="w-full bg-surface border border-border text-text px-4 py-3.5 font-body text-base placeholder:text-text-dim focus:border-gold focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)] transition-all duration-200"
-            />
+            <div className="relative">
+              <Mail
+                size={18}
+                strokeWidth={1.5}
+                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-text-dim pointer-events-none"
+                aria-hidden="true"
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="maria@suaempresa.com.br"
+                required
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
+                className="w-full bg-surface border border-border text-text pl-10 pr-4 py-3.5 font-body text-base placeholder:text-text-dim focus:border-gold focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)] transition-all duration-200"
+              />
+            </div>
           </div>
 
           <div>
@@ -76,18 +93,26 @@ export default function Contact() {
             >
               O que você precisa construir?
             </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              placeholder="Conte-nos sobre o seu negócio e o problema que você quer resolver."
-              required
-              value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
-              className="w-full bg-surface border border-border text-text px-4 py-3.5 font-body text-base placeholder:text-text-dim focus:border-gold focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)] transition-all duration-200 resize-vertical"
-            />
+            <div className="relative">
+              <MessageSquare
+                size={18}
+                strokeWidth={1.5}
+                className="absolute left-3.5 top-4 text-text-dim pointer-events-none"
+                aria-hidden="true"
+              />
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                placeholder="Conte-nos sobre o seu negócio e o problema que você quer resolver."
+                required
+                value={formData.message}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                className="w-full bg-surface border border-border text-text pl-10 pr-4 py-3.5 font-body text-base placeholder:text-text-dim focus:border-gold focus:outline-none focus:shadow-[0_0_0_2px_rgba(232,184,109,0.2)] transition-all duration-200 resize-vertical"
+              />
+            </div>
           </div>
 
           <button

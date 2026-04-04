@@ -1,6 +1,9 @@
 "use client";
 
+import { Search, FileText, Code, Rocket } from "lucide-react";
 import { motion, useReducedMotion } from "framer-motion";
+
+const stepIcons = [Search, FileText, Code, Rocket];
 
 const steps = [
   {
@@ -57,33 +60,42 @@ export default function Process() {
           {/* Connecting line - desktop */}
           <div className="hidden md:block absolute top-12 left-0 right-0 h-px bg-border" />
 
-          {steps.map((step, i) => (
-            <motion.div
-              key={i}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.5,
-                    ease: [0.25, 0.1, 0.25, 1],
+          {steps.map((step, i) => {
+            const StepIcon = stepIcons[i];
+            return (
+              <motion.div
+                key={i}
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  visible: {
+                    opacity: 1,
+                    y: 0,
+                    transition: {
+                      duration: 0.5,
+                      ease: [0.25, 0.1, 0.25, 1],
+                    },
                   },
-                },
-              }}
-              className="relative md:border-l-0 border-l border-border md:border-0 pl-6 md:pl-0 py-2 md:py-0"
-            >
-              <span className="font-display text-[clamp(1.75rem,3vw,2.75rem)] text-copper opacity-60 block mb-3">
-                {step.number}
-              </span>
-              <h3 className="font-display text-[clamp(1.25rem,2vw,1.5rem)] leading-[1.3] mb-3">
-                {step.title}
-              </h3>
-              <p className="text-text-muted text-base leading-[1.6]">
-                {step.description}
-              </p>
-            </motion.div>
-          ))}
+                }}
+                className="relative md:border-l-0 border-l border-border md:border-0 pl-6 md:pl-0 py-2 md:py-0"
+              >
+                <StepIcon
+                  size={24}
+                  strokeWidth={1.5}
+                  className="text-copper opacity-60 mb-2"
+                  aria-hidden="true"
+                />
+                <span className="font-display text-[clamp(1.75rem,3vw,2.75rem)] text-copper opacity-60 block mb-3">
+                  {step.number}
+                </span>
+                <h3 className="font-display text-[clamp(1.25rem,2vw,1.5rem)] leading-[1.3] mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-text-muted text-base leading-[1.6]">
+                  {step.description}
+                </p>
+              </motion.div>
+            );
+          })}
         </motion.div>
       </div>
     </section>

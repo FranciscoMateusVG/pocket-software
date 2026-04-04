@@ -1,19 +1,23 @@
 "use client";
 
+import { Fingerprint, PenTool, Key } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const pillars = [
   {
+    icon: Fingerprint,
     title: "Exclusivo",
     description:
       "Seu código-fonte é criado do zero, só para o seu negócio. Não reutilizamos, não revendemos, não construímos a mesma coisa para ninguém.",
   },
   {
+    icon: PenTool,
     title: "Sob Medida",
     description:
       "Cada funcionalidade, cada fluxo de trabalho, cada decisão é moldada pela forma como a sua equipe realmente trabalha — não pela forma como um fornecedor de SaaS acha que deveria.",
   },
   {
+    icon: Key,
     title: "Seu",
     description:
       "Você é dono do código desde o primeiro dia. Hospede onde quiser. Amplie com qualquer equipe. É a sua vantagem competitiva, não o nosso produto.",
@@ -30,13 +34,21 @@ export default function Difference() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
-          {pillars.map((pillar, i) => (
-            <div key={i}>
+          {pillars.map(({ icon: Icon, title, description }, i) => (
+            <div key={i} className="border-t-2 border-copper pt-6">
+              <span className="inline-block mb-5 [filter:drop-shadow(0_0_10px_rgba(200,149,108,0.25))]">
+                <Icon
+                  size={32}
+                  strokeWidth={1.5}
+                  className="text-copper"
+                  aria-hidden="true"
+                />
+              </span>
               <h3 className="font-display text-[clamp(1.25rem,2vw,1.5rem)] leading-[1.3] mb-4">
-                {pillar.title}
+                {title}
               </h3>
               <p className="text-text-muted text-base leading-[1.6]">
-                {pillar.description}
+                {description}
               </p>
             </div>
           ))}

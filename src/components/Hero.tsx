@@ -33,8 +33,15 @@ export default function Hero() {
   };
 
   return (
-    <section className="pt-40 pb-32 md:pt-64 md:pb-48">
-      <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
+    <section className="relative overflow-hidden pt-40 pb-32 md:pt-64 md:pb-48">
+      {/* Animated gradient mesh — CSS-only, decorative */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="hero-blob hero-blob-1" />
+        <div className="hero-blob hero-blob-2" />
+        <div className="hero-blob hero-blob-3" />
+      </div>
+
+      <div className="relative max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
         <div className="grid grid-cols-1 md:grid-cols-[7fr_5fr]">
           <div>
             <motion.h1
