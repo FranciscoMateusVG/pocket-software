@@ -33,7 +33,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative overflow-hidden pt-40 pb-32 md:pt-64 md:pb-48">
+    <section className="relative overflow-hidden pt-24 pb-24 md:pt-40 md:pb-32">
       {/* Animated gradient mesh — CSS-only, decorative */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
         <div className="hero-blob hero-blob-1" />
