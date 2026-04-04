@@ -1,0 +1,5 @@
+services:
+  pocket-software-b5e58e:
+    build: .
+    container_name: pocket-software-b5e58e
+    restart: unless-stopped
