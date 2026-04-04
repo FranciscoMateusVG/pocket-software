@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { trackCTAClick } from "@/hooks/useAnalytics";
 
 export default function Hero() {
   const prefersReducedMotion = useReducedMotion();
@@ -31,10 +32,12 @@ export default function Hero() {
   ];
 
   const scrollToContact = () => {
+    trackCTAClick("vamos_conversar", "hero");
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToProcess = () => {
+    trackCTAClick("veja_como_funciona", "hero");
     document.getElementById("how-it-works")?.scrollIntoView({ behavior: "smooth" });
   };
 

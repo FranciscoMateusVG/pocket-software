@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { trackCTAClick } from "@/hooks/useAnalytics";
 
 export default function StickyHeader() {
   const [showHeader, setShowHeader] = useState(false);
@@ -17,6 +18,7 @@ export default function StickyHeader() {
   }, []);
 
   const scrollToContact = () => {
+    trackCTAClick("vamos_conversar", "sticky_header");
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 

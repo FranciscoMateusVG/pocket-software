@@ -1,4 +1,5 @@
 import StickyHeader from "@/components/StickyHeader";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 import Hero from "@/components/Hero";
 import Pain from "@/components/Pain";
 import Difference from "@/components/Difference";
@@ -17,6 +18,7 @@ export default function Home() {
         Pular para o conteúdo
       </a>
       <StickyHeader />
+      <AnalyticsProvider />
       <main id="main-content">
         <Hero />
         <Pain />

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { User, Mail, MessageSquare } from "lucide-react";
 import { sendGAEvent } from "@next/third-parties/google";
+import { trackFormEngagement } from "@/hooks/useAnalytics";
 import AnimatedSection from "./AnimatedSection";
 
 export default function Contact() {
@@ -11,6 +12,14 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const formEngagedRef = useRef(false);
+
+  const handleFieldFocus = () => {
+    if (!formEngagedRef.current) {
+      formEngagedRef.current = true;
+      trackFormEngagement();
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -56,6 +65,7 @@ export default function Contact() {
                 placeholder="Maria Silva"
                 required
                 value={formData.name}
+                onFocus={handleFieldFocus}
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
@@ -85,6 +95,7 @@ export default function Contact() {
                 placeholder="maria@suaempresa.com.br"
                 required
                 value={formData.email}
+                onFocus={handleFieldFocus}
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
@@ -114,6 +125,7 @@ export default function Contact() {
                 placeholder="Conte-nos sobre o seu negócio e o problema que você quer resolver."
                 required
                 value={formData.message}
+                onFocus={handleFieldFocus}
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })
                 }

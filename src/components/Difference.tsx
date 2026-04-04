@@ -26,7 +26,7 @@ const pillars = [
 
 export default function Difference() {
   return (
-    <AnimatedSection className="py-32 md:py-48">
+    <AnimatedSection id="difference" className="py-32 md:py-48">
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
         <h2 className="font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] mb-16">
           Construímos software que pertence a você.{" "}

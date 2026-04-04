@@ -4,7 +4,7 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function CapacitySignal() {
   return (
-    <AnimatedSection className="py-16 md:py-24">
+    <AnimatedSection id="capacity" className="py-16 md:py-24">
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)] text-center">
         <div className="inline-flex items-center gap-3 justify-center">
           {/* Pulsing availability indicator */}

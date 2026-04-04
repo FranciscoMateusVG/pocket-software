@@ -20,7 +20,7 @@ const bullets = [
 
 export default function Pain() {
   return (
-    <AnimatedSection className="py-16 md:py-24 bg-surface-alt">
+    <AnimatedSection id="pain" className="py-16 md:py-24 bg-surface-alt">
       <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,4vw,3rem)]">
         <h2 className="font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.2] tracking-[-0.01em] mb-10">
           Software pronto quase resolve.{" "}
