@@ -8,3 +8,8 @@ services:
         NEXT_PUBLIC_CALCOM_EVENT_SLUG: ${NEXT_PUBLIC_CALCOM_EVENT_SLUG}
     container_name: pocket-software-b5e58e
     restart: unless-stopped
+    environment:
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USER=${SMTP_USER}
+      - SMTP_PASS=${SMTP_PASS}
