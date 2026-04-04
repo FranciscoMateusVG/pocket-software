@@ -25,7 +25,7 @@ export default function StickyHeader() {
       {showHeader && (
         <motion.nav
           role="navigation"
-          aria-label="Main navigation"
+          aria-label="Navegação principal"
           initial={prefersReducedMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -20 }}
