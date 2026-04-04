@@ -33,7 +33,7 @@ const faqs = [
   {
     question: "Quanto tempo leva um projeto?",
     answer:
-      "A maioria dos projetos é entregue em 8 a 16 semanas, dependendo do escopo. Definimos o prazo exato durante o Diagnóstico — sem estimativas vagas, sem prazos que mudam.",
+      "Uma semana. Do briefing ao seu software funcionando em produção. Não é estimativa — é o nosso padrão. O escopo é definido no Diagnóstico para garantir que a entrega seja possível nesse prazo.",
   },
   {
     question: "Eu sou dono do código?",

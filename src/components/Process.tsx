@@ -28,7 +28,7 @@ const steps = [
     number: "04",
     title: "Entrega",
     description:
-      "Entregamos um código-fonte completo, documentado e totalmente seu para operar, manter e evoluir.",
+      "O código é 100% seu — sem asteriscos. Você pode hospedar onde quiser, escalar com qualquer equipe ou nos chamar para hospedar, manter e evoluir com você. Serviço premium, nas suas condições.",
   },
 ];
 

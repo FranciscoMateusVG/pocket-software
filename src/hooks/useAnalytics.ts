@@ -47,6 +47,8 @@ export function useSectionVisibility() {
   useEffect(() => {
     const sections = [
       { id: "hero", selector: "section:first-of-type" },
+      { id: "speed", selector: "#speed" },
+      { id: "capacity", selector: "#capacity" },
       { id: "pain", selector: "#pain" },
       { id: "difference", selector: "#difference" },
       { id: "how-it-works", selector: "#how-it-works" },
