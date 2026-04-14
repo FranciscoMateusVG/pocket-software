@@ -178,7 +178,7 @@ export default function Contact() {
             </p>
 
             <a
-              href="https://wa.me/5516988775969?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Pocket%20Software."
+              href="https://wa.me/5511994367475?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Pocket%20Software."
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleWhatsAppClick}
