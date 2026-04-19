@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <!-- Background -->
+  <rect width="1200" height="1200" rx="80" fill="#1A1714"/>
+
+  <!-- Subtle copper glow circle behind the P -->
+  <circle cx="600" cy="480" r="280" fill="none" stroke="rgba(200,149,108,0.08)" stroke-width="120"/>
+
+  <!-- Main mark: serif P -->
+  <text
+    x="600"
+    y="580"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="520"
+    font-weight="bold"
+    fill="#E8B86D"
+  >P</text>
+
+  <!-- Wordmark below -->
+  <text
+    x="600"
+    y="820"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="88"
+    font-weight="600"
+    letter-spacing="16"
+    fill="#F0EBE3"
+  >POCKET</text>
+
+  <text
+    x="600"
+    y="920"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, sans-serif"
+    font-size="88"
+    font-weight="600"
+    letter-spacing="16"
+    fill="#F0EBE3"
+  >SOFTWARE</text>
+
+  <!-- Accent line -->
+  <rect x="440" y="840" width="320" height="3" rx="1.5" fill="#C8956C" opacity="0.6"/>
+</svg>
